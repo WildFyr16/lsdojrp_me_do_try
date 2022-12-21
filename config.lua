@@ -6,19 +6,20 @@ Config.TextColor_Try        = { r = 255, g = 255, b = 255, a = 255 }
 
 Config.Background           = true -- Enable/Disable the background of the 3D text?
 
-Config.BackgroundColor_Me   = { r = 63, g = 153, b = 247, a = 150 } -- Adjust the background color (3D and the Chat too)
-Config.BackgroundColor_Do   = { r = 202, g = 37, b = 78, a = 150 }
-Config.BackgroundColor_Try  = { r = 22, g = 173, b = 196, a = 150 }
+Config.BackgroundColor_Me   = { r = 172, g = 79, b = 198, a = 150 } -- Bright Purple -- Adjust the background color (3D and the Chat too)
+Config.BackgroundColor_Do   = { r = 157, g = 34, b = 53, a = 150 } -- Crimson
+Config.BackgroundColor_Try  = { r = 66, g = 158, b = 157, a = 150 } -- Mint Blue
 
 Config.DisplayOnChat        = true -- Display actions in chat?
 
-Config.EnablePlayerName     = true -- Enable player ingame name in the text? If true you need to have ESX
+Config.EnablePlayerName     = false -- Enable player ingame name in the text? Requires ESX to grab player name.
+Config.EnablePlayerUserName = true -- Enable player username in the text? Does not require ESX, thanks to WildFyr
 
-Config.Log                  = false -- Enable/Disable logging?
-Config.Logwebhook           = "Your Webhook Url" -- If logging enabled then replace 'Your Webhook' with your Discord Channel Webhook
+Config.Log                  = true -- Enable/Disable logging?
+Config.Logwebhook           = "YOUR_WEBHOOK_LINK" -- If logging enabled then replace 'Your Webhook' with your Discord Channel Webhook
 
 Config.checkForUpdates      = true -- Check for updates
-Config.Version              = '1.6'
+Config.Version              = '1.6.1'
 
 ---------- Advanced options ----------
 
