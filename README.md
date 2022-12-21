@@ -1,5 +1,8 @@
 <h1 align='center'>Me, Do & Try</a></h1>
 
+#### UPDATE 1.6.1
+* Added support for Player Usernames
+* Fixed issue with code where server.lua would not load upon resource start
 #### UPDATE 1.6
 * Fixed the `everyone can see the texts` problem *(for me it worked perfectly, now it won't be a problem I hope)*
 #### Working on
@@ -20,11 +23,11 @@ It could help sometimes if the player wants to show something for another player
 
 ## How to install
 
-* Git [arp_me_do_try](https://github.com/hoaaiww/arp_me_do_try)
-* Extract ```arp_me_do_try-main.rar```
-* Remove ```-main``` from ```arp_me_do_try```
-* Copy and paste ```arp_me_do_try``` folder to ```resources```
-* Add ```start arp_me_do_try``` to your ```server.cfg``` file
+* Git [lsdojrp_me_do_try]([https://github.com/hoaaiww/arp_me_do_try](https://github.com/WildFyr16/lsdojrp_me_do_try))
+* Extract ```lsdojrp_me_do_try-main.rar```
+* Remove ```-main``` from ```lsdojrp_me_do_try```
+* Copy and paste ```lsdojrp_me_do_try``` folder to ```resources```
+* Add ```start lsdojrp_me_do_try``` to your ```server.cfg``` file
 
 ## Customizable script!
 
@@ -36,6 +39,6 @@ Config.Log                  = true
 Config.Logwebhook           = "Replace Me With Your Webhook Link"
 ```
 
-## Dependencies (If you want to use player names in text)
+## Dependencies - Non! This is a standalone script. However if you want Player names (NOT USERNAMES) in the chat bubble you will need ESX.
 
 * [ESX](https://github.com/esx-framework/esx-legacy.git)
