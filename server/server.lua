@@ -17,8 +17,11 @@ RegisterCommand("me", function(source, args, rawCommand)
                 local xPlayer = ESX.GetPlayerFromId(source)
                 local playerName = xPlayer.getName()
                 TriggerClientEvent('arp_medotry:showText', -1, playerName..": "..text, source, "me", success)
+            elseif Config.EnablePlayerUserName then
+                local lsdojplayerName = GetPlayerName(source)
+                TriggerClientEvent('arp_medotry:showText', -1, lsdojplayerName..": "..text, source, "me", success)
             else
-                TriggerClientEvent('arp_medotry:showText', -1, text, source, "me", success)
+                TriggerClientEvent('arp_medotry:showText', -1, text, source, "try", success)
             end
             if Config.Log then
                 logMe(("**%s** executed a */me* command.\n\n`Content:` %s"):format(GetPlayerName(source), text))
@@ -38,8 +41,11 @@ RegisterCommand("do", function(source, args, rawCommand)
                 local xPlayer = ESX.GetPlayerFromId(source)
                 local playerName = xPlayer.getName()
                 TriggerClientEvent('arp_medotry:showText', -1, playerName..": "..text, source, "do", success)
+            elseif Config.EnablePlayerUserName then
+                local lsdojplayerName = GetPlayerName(source)
+                TriggerClientEvent('arp_medotry:showText', -1, lsdojplayerName..": "..text, source, "do", success)
             else
-                TriggerClientEvent('arp_medotry:showText', -1, text, source, "do", success)
+                TriggerClientEvent('arp_medotry:showText', -1, text, source, "try", success)
             end
             if Config.Log then
                 logDo(("**%s** executed a */do* command.\n\n`Content:` %s"):format(GetPlayerName(source), text))
@@ -63,6 +69,9 @@ RegisterCommand("try", function(source, args, rawCommand)
                 local xPlayer = ESX.GetPlayerFromId(source)
                 local playerName = xPlayer.getName()
                 TriggerClientEvent('arp_medotry:showText', -1, playerName..": "..text, source, "try", success)
+            elseif Config.EnablePlayerUserName then
+                local lsdojplayerName = GetPlayerName(source)
+                TriggerClientEvent('arp_medotry:showText', -1, lsdojplayerName..": "..text, source, "try", success)
             else
                 TriggerClientEvent('arp_medotry:showText', -1, text, source, "try", success)
             end
@@ -85,7 +94,7 @@ function logMe(msg)
                 ["description"] = msg:gsub("%^%d",""),
                 ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
                 ["footer"] = {
-                    ["text"] = "ARP: /Me, Do & Try",
+                    ["text"] = "LSDOJRP: /Me, Do & Try",
                 },
             }
         }
@@ -102,7 +111,7 @@ function logDo(msg)
                 ["description"] = msg:gsub("%^%d",""),
                 ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
                 ["footer"] = {
-                    ["text"] = "ARP: /Me, Do & Try",
+                    ["text"] = "LSDOJRP: /Me, Do & Try",
                 },
             }
         }
@@ -119,7 +128,7 @@ function logTry(msg)
                 ["description"] = msg:gsub("%^%d",""),
                 ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
                 ["footer"] = {
-                    ["text"] = "ARP: /Me, Do & Try",
+                    ["text"] = "LSDOJRP: /Me, Do & Try",
                 },
             }
         }
@@ -140,7 +149,7 @@ if Config.checkForUpdates then
 				elseif tonumber(version) > tonumber(data.medotryVersion) then
 					print("The [^2"..resourceName.."^7] script is on ^1higher^7 version then the current up to date version! Please check to update: ^5https://github.com/hoaaiww/arp_me_do_try ^7")
 				else
-					print("The [^2"..resourceName.."^7] script is ^2up to date^7! Version: ^2' .. version ..'^7')
+					print("The [^2"..resourceName.."^7] script is ^2up to date^7! Version: ^2" .. version .."^7")
 				end
 			else
 				print("^1Version Check failed!^7 HTTP Error Code: "..err)
